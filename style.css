@@ -7,6 +7,7 @@
 }
 html , :root {
     height: 100vh;
+    width: 100vw;
     font-size: 62.5%;
 }
 :root {
@@ -22,7 +23,6 @@ body {
     font-family: 'Poppins' , -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.5rem;
     position: relative;
-    height: 100%;
 }
 
 header {
@@ -34,7 +34,7 @@ header {
     width: 100%;
 }
 header.scrolling{
-    background: linear-gradient(to top , rgba(255, 241, 241, 0.4) 10% , rgba(255, 255, 255, 0.9));
+    background: linear-gradient(to top , rgba(255, 241, 241, 0.7) 10% , rgba(255, 255, 255, 0.9));
     box-shadow: 0 0 0.5rem 0.1rem rgba(255, 241, 241, 0.4);
 }
 .brand {
@@ -51,18 +51,21 @@ nav {
     color: var(--color-primary);
 }
 nav.menu {
-    margin: 0 4rem;
+    margin-left:4rem;
 }
 nav .nav-item {
     padding:  0.5rem 1rem;
     margin: 0 0.5rem;
     cursor: pointer;
-    border: 0.2rem solid transparent;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 1.7rem;
     font-weight: 700;
 
+}
+
+nav .nav-item:last-child {
+    margin-right:0 !important  ;
 }
 nav .nav-item:hover{
     /* transform: scale(1.04); */
@@ -73,14 +76,13 @@ nav.menu .nav-item:hover {
     background-color: var(--color-secondary);
     color: white;
     box-shadow: 0 0 0.5rem 0.2rem var(--color-secondary);
-    padding: 0.4rem 1rem;
     backface-visibility: hidden;
     transition: all 0.4s ease-in-out;
-    
+
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 2rem;
     /* max-height: 100rem; */
     display: flex;
@@ -227,7 +229,7 @@ section.stories .action {
 }
 .cards-row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin: 2rem 0;
@@ -235,7 +237,7 @@ section.stories .action {
 }
 
 .card {
-    flex: 0 0 25%;
+    flex: 0 0 30%;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -349,5 +351,60 @@ section.stories .action {
     section.main .content {
         padding-bottom: 0;
         
+    }
+}
+@media (max-width : 950px) {
+    section.main .content  {
+        padding : 0 2rem ;
+    }
+    header {
+        padding: 0.5rem 4rem;
+    }
+    
+    .menu .nav-item {
+        display: none;
+    }
+    .nav-item.menu-toggler {
+        display: block;
+        align-self: flex-end;
+        margin: 0.5rem;
+        margin-bottom: 2rem !important;
+    }
+    @keyframes appear {
+        0% {opacity : 0.5 }
+        100% {opacity: 1; }
+
+    }
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .menu-toggle .nav-item {
+        display: block;
+        margin: 0.5rem;
+        animation: appear 0.5s alternate;
+    }
+
+}
+
+@media (max-width : 720px) {
+    .cards-row {
+        flex-direction: column;
+        max-width: 100%;
+        
+    }
+    .cards-row .card {
+        margin: 2rem;
+        width: auto;
+        height: none;
+        flex: 1 1 0;
+        max-width: 500px;
+        
+        max-height: 70% ;
+    }
+
+    section.main .content {
+        flex-direction: column;
     }
 }
