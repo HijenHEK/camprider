@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html , :root {
+    height: 100vh;
+    font-size: 62.5%;
+}
+:root {
+    --color-primary :  rgb(84, 81, 78);
+    --color-secondary :  rgb(235, 158, 82);
+    --color-tertiary :  rgb(129,121,112);
+
+    --bg-color-primary : rgb(255,255,255);
+    --bg-color-secondary : rgb(215,212,204);
+
+}
+body {
+    font-family: 'Poppins' , -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    padding: 0.5rem 7rem;
+    margin-top: 1rem;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+header.scrolling{
+    background: linear-gradient(to top , rgba(255, 241, 241, 0.4) 10% , rgba(255, 255, 255, 0.9));
+    box-shadow: 0 0 0.5rem 0.1rem rgba(255, 241, 241, 0.4);
+}
+.brand {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.3rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+nav {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    color: var(--color-primary);
+}
+nav.menu {
+    margin: 0 4rem;
+}
+nav .nav-item {
+    padding:  0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border: 0.2rem solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+
+}
+nav .nav-item:hover{
+    /* transform: scale(1.04); */
+
+}
+
+nav.menu .nav-item:hover {
+    background-color: var(--color-secondary);
+    color: white;
+    box-shadow: 0 0 0.5rem 0.2rem var(--color-secondary);
+    padding: 0.4rem 1rem;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    
+}
+
+section {
+    height: 100vh;
+    padding-top: 2rem;
+    /* max-height: 100rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.main {
+    background-color: rgb(250,243,239)  ;
+    background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 10%, rgba(221, 216, 212, 0.4)  90%),
+    linear-gradient(to left, rgba(255, 255, 255, 0) 50%,  rgb(237, 234, 228) 90%),
+    url('./img/dominik-jirovsky-re2LZOB2XvY-unsplash.jpg');
+    background-size: cover;
+    background-position: bottom;
+    max-height: 90%;
+    animation: clipPath 4s forwards;
+    transition: all 1s ease-in;
+    filter: drop-shadow(0 1rem 3rem rgba(32, 32, 31, 0.5));    
+}
+
+@keyframes clipPath {
+    0% { -webkit-clip-path: none }
+    100% { -webkit-clip-path: polygon(0% 0%, 0% 100%, 4% 99%, 6% 100%, 7% 99%,
+        8% 100%, 9% 99%, 10% 100%, 11% 99%, 15% 100%,
+        17% 100%, 18% 99%, 20% 99.5%, 22% 99%, 25% 100%,
+        27% 100%, 30% 99.5%, 32% 99%, 35% 100%, 40% 99%,
+        42% 99%, 45% 99.5%, 47% 100%, 50% 99.5%,
+        52% 100%, 55% 99%, 57% 100%, 62% 99%, 65% 100%,
+        67% 100%, 70% 99%, 72% 99.5%, 73% 99%, 75% 100%,
+        77% 100%, 80% 99.5%, 82% 99%, 85% 100%, 87% 99%,
+        89% 99%, 92% 99.5%, 94% 100%, 96% 99.5%, 97% 99.2%
+                             , 100% 100% , 100% 0%);
+        
+    }
+  }
+
+/* section.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+section.main .content {
+    padding: 0 10rem;
+    text-transform: uppercase;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.main .content .header {
+    margin: 2rem 0;
+
+}
+section.main .content .header .title {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
+    color: var(--color-secondary);
+    margin: 0.5rem 0;
+}
+section.main .content .header .subtitle {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-style: oblique;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    color: var(--color-tertiary);
+}
+section.main .content  .body .desc{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+ul , li {
+    list-style: none;
+}
+section.main .content  .action {
+    display: flex;
+    
+}
+
+.btn {
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0.8;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+.btn:hover {
+    opacity: 1;
+}
+.btn:active {
+    transform: translate(0.1rem, 0.08rem);
+}
+
+.btn-action {
+    background-color: var(--color-secondary);
+}
+
+
+section.stories {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+    background: linear-gradient(to bottom , rgba(217,214,205,0.5) , rgba(217,214,205,0.7)) ,
+                url('./img/dino-reichmuth-pl1mhwMctJc-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+}
+section.stories .header {
+    text-align: center;
+    margin: 2rem 0;
+}
+section.stories .header .title {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+
+}
+section.stories .header .subtitle {
+    font-size: 2rem;
+    font-style: oblique;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    color: var(--color-tertiary);
+}
+section.stories .action {
+    margin: 2rem 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+
+}
+.cards-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+    height: 80%;
+}
+
+.card {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: var(--color-tertiary);
+    height: 100%;
+    width: 450px;
+    max-width: 80%;
+    box-shadow: 0 0 0.4rem 0.05rem var(--color-tertiary);
+
+}
+
+
+.card .image {
+    flex: 0 0 60%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.card .body {
+    flex: 0 0 40%;
+    color: white;
+    padding: 1.5rem;
+}
+
+.card .body .title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        letter-spacing: 0.2rem;
+}
+
+.card .body .text {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.card .image img {
+    width: 100%;
+}
+
+@media (max-height : 700px ){
+    section.main .content {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    section.stories .header .title {
+        font-size: 3.5rem;
+        
+    
+    }
+    section.stories .header .subtitle {
+        font-size: 1.8rem;
+        
+    }
+    
+    .cards-row {
+        
+        margin: 1rem 0;
+    }
+    
+    .card {
+         max-width: 350px;
+    }
+    
+    
+    .card .body {
+        flex: 0 0 40%;
+        color: white;
+        padding: 1.5rem;
+    }
+    
+    .card .body .title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+    }
+    
+    
+    
+    
+}
+
+@media (max-height : 500px ){
+    
+    section.main .content .header .title {
+        font-size: 4rem;
+        margin-bottom: 0;
+
+    }
+    section.main .content .header .subtitle {
+        font-size: 1.7rem;
+        margin-top: 0.5rem;
+
+    }
+    section.main .content  .body .desc{
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+
+        
+    }
+    
+}
+
+@media (max-height : 400px) {
+
+    section.main  {
+        align-items: flex-end;
+    }
+    section.main .content {
+        padding-bottom: 0;
+        
+    }
+}
