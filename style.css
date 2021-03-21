@@ -7,11 +7,10 @@
 }
 html , :root {
     height: 100vh;
-    width: 100vw;
     font-size: 62.5%;
 }
 :root {
-    --color-primary :  rgb(84, 81, 78);
+    --color-primary :  #54514e;
     --color-secondary :  rgb(235, 158, 82);
     --color-tertiary :  rgb(129,121,112);
 
@@ -27,7 +26,7 @@ body {
 
 header {
     display: flex;
-    align-items: start;
+    align-items: center;
     padding: 0.5rem 7rem;
     margin-top: 1rem;
     position: fixed;
@@ -44,6 +43,10 @@ header.scrolling{
     letter-spacing: 0.3rem;
     font-weight: 700;
     font-size: 2rem;
+
+}
+.brand img {
+    width:  13rem;
 }
 nav {
     display: flex;
