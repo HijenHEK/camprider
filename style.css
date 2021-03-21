@@ -27,6 +27,7 @@ body {
 
 header {
     display: flex;
+    align-items: start;
     padding: 0.5rem 7rem;
     margin-top: 1rem;
     position: fixed;
@@ -52,9 +53,10 @@ nav {
 }
 nav.menu {
     margin-left:4rem;
+    
 }
 nav .nav-item {
-    padding:  0.5rem 1rem;
+    padding:  1.5rem 1rem;
     margin: 0 0.5rem;
     cursor: pointer;
     text-transform: uppercase;
@@ -63,6 +65,7 @@ nav .nav-item {
     font-weight: 700;
 
 }
+
 
 nav .nav-item:last-child {
     margin-right:0 !important  ;
@@ -75,10 +78,14 @@ nav .nav-item:hover{
 nav.menu .nav-item:hover {
     background-color: var(--color-secondary);
     color: white;
-    box-shadow: 0 0 0.5rem 0.2rem var(--color-secondary);
+    box-shadow: 0 0 1rem 0.2rem var(--color-secondary);
     backface-visibility: hidden;
     transition: all 0.4s ease-in-out;
 
+}
+
+.nav-item.menu-toggler {
+    display: none;
 }
 
 section {
@@ -363,12 +370,19 @@ section.stories .action {
     
     .menu .nav-item {
         display: none;
+        padding: 0.5rem 1rem;
     }
     .nav-item.menu-toggler {
         display: block;
         align-self: flex-end;
         margin: 0.5rem;
         margin-bottom: 2rem !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-item.menu-toggler img {
+        width:  3.5rem;
     }
     @keyframes appear {
         0% {opacity : 0.5 }

@@ -12,17 +12,22 @@ window.addEventListener('load' ,()=>{
     });
     var toggleBtn = document.getElementById('toggler');
     var toggleMenu = document.getElementById('toggle');
+    var toggleSvg = document.querySelector('.nav-item.menu-toggler img');
     toggleBtn.addEventListener('click' , ()=>{
         if(toggleMenu.classList.contains('menu-toggle')) {
 
             toggleMenu.classList.remove('menu-toggle') ;
+            toggleSvg.attributes.src.nodeValue = './ico/menu.svg' ;
             if(scrollY <= 50 ) nav.classList.remove('scrolling');
             return;
         }  
         toggleMenu.classList.add('menu-toggle') ;
         nav.classList.add('scrolling');
+        toggleSvg.attributes.src.nodeValue = './ico/close.svg' ;
 
 
         
     });
+
+    
 });
