@@ -29,13 +29,12 @@ header {
     display: flex;
     align-items: center;
     padding: 0.5rem 7rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
     position: fixed;
     z-index: 9999;
     width: 100%;
 }
 header.scrolling{
-    margin-top: 2rem;
     background: linear-gradient(to top , rgba(255, 247, 247, 0.7) 10% , rgba(255, 255, 255, 0.7));
     box-shadow: 0 0 0.5rem 0.1rem rgba(255, 241, 241, 0.2);
 }
@@ -98,8 +97,12 @@ nav .nav-item {
 nav .nav-item:last-child {
     margin-right:0 !important  ;
 }
-nav .nav-item:hover{
-    /* transform: scale(1.04); */
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 @media (hover: hover) {
 
@@ -131,7 +134,7 @@ section.main {
     background-image:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 10%, rgba(221, 216, 212, 0.4)  90%),
     linear-gradient(to left, rgba(255, 255, 255, 0) 50%,  rgb(237, 234, 228) 90%),
-    url('./img/dominik-jirovsky-re2LZOB2XvY-unsplash.jpg');
+    url('./img/dominik.jpg');
     background-size: cover;
     background-position: bottom;
     max-height: 90%;
@@ -252,7 +255,7 @@ section.stories {
     align-items: center;
     margin-top: -2rem;
     background: linear-gradient(to bottom , rgba(217,214,205,0.4) , rgba(84, 81, 78, 0.952)) ,
-                url('./img/dino-reichmuth-pl1mhwMctJc-unsplash.jpg');
+                url('./img/dino.jpg');
     background-size: cover;
     background-position: center;
     /* background-blend-mode: color; */
@@ -427,7 +430,7 @@ section.explore {
     background-color: rgb(250,243,239)  ;
     background-image:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 10%, rgba(221, 216, 212, 0.4)  90%),
-    url('./img/dominik-jirovsky-re2LZOB2XvY-unsplash.jpg');
+    url('./img/dominik.jpg');
     background-size: cover;
     background-position: bottom;
     box-shadow: 0 0 0.5rem 0.5rem rgba(175, 171, 169, 0.61);
@@ -674,6 +677,7 @@ footer .social-links > a:hover img{
     }
     header {
         padding: 0.5rem 4rem;
+        margin: 4rem 0;
     }
     
     .menu .nav-item {
