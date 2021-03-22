@@ -12,10 +12,11 @@ html , :root {
 :root {
     --color-primary :  #54514e;
     --color-secondary :  rgb(235, 158, 82);
-    --color-tertiary :  rgb(129,121,112);
+    --color-tertiary :  #817970;
 
     --bg-color-primary : rgb(255,255,255);
     --bg-color-secondary : rgb(215,212,204);
+    --bg-color-tertiary : #9C8E7E ;
 
 }
 body {
@@ -28,7 +29,7 @@ header {
     display: flex;
     align-items: center;
     padding: 0.5rem 7rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     position: fixed;
     z-index: 9999;
     width: 100%;
@@ -38,15 +39,36 @@ header.scrolling{
     box-shadow: 0 0 0.5rem 0.1rem rgba(255, 241, 241, 0.4);
 }
 .brand {
-    flex: 1;
-    padding: 0.5rem 1rem;
+    /* flex: 1;
+    padding: 0rem 1rem;
     letter-spacing: 0.3rem;
     font-weight: 700;
-    font-size: 2rem;
-
+    font-size: 2rem; */
+    flex: 1;
+    margin: -2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.brand .brand-name {
+    margin-left: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    font-size: 3rem; 
+    color: var(--color-primary);
+    flex-shrink: 1;
+}
+.brand .brand-name.toggle {
+    margin: 3rem 2rem !important;
+}
+.brand img.toggle {
+    margin : 0  0;
+    height: 15rem;
 }
 .brand img {
-    width:  13rem;
+    height:  8rem;
+    border-radius: 100%;
+    box-shadow: 0 0 0.5rem 0.12rem var(--bg-color-tertiary);
 }
 nav {
     display: flex;
@@ -176,7 +198,6 @@ ul , li {
 }
 section.main .content  .action {
     display: flex;
-    
 }
 
 .btn {
@@ -196,8 +217,14 @@ section.main .content  .action {
 
 .btn-action {
     background-color: var(--color-secondary);
+    color: white;
+
 }
 
+.container {
+    max-width : 1440px ;
+    margin : 0 auto ;
+}
 
 section.stories {
     flex-direction: column;
@@ -253,10 +280,12 @@ section.stories .action {
     justify-content: stretch;
     background-color: var(--color-tertiary);
     height: 100%;
-    width: 450px;
+    width: 400px;
+    max-width: 450px;
+
     max-width: 80%;
     box-shadow: 0 0 0.4rem 0.05rem var(--color-tertiary);
-
+    border-radius: 5px;
 }
 
 
@@ -266,6 +295,9 @@ section.stories .action {
     display: flex;
     justify-content: center;
     align-items: start;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
 }
 .card .body {
     flex: 0 0 40%;
@@ -288,6 +320,70 @@ section.stories .action {
 .card .image img {
     width: 100%;
 }
+section.plans {
+    display: block;
+    padding-top: 0;
+}
+
+section.plans .plan {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    height: 500px;
+    max-height: 100%;
+    max-width: 130rem;
+    margin: 2rem auto;
+}
+section.plans .plan:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+section.plans .plan .cover {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+    opacity: 0.8;
+    box-shadow: 0 0 0.5rem 0.2rem var(--bg-color-tertiary);
+
+}
+section.plans .plan .cover img {
+    /* flex-shrink: 0; */
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+section.plans .plan .offer {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem;
+    background-color: var(--bg-color-tertiary);
+    box-shadow: 0 0 0.5rem 0.2rem var(--bg-color-tertiary);
+    color: white;
+}
+section.plans .plan .offer .title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+section.plans .plan .offer .details {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+section.plans .plan .offer .btn-action {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+
+
+
 
 @media (max-height : 700px ){
     section.main .content {
@@ -326,7 +422,6 @@ section.stories .action {
             font-size: 2rem;
             margin-bottom: 0.5rem;
     }
-    
     
     
     
@@ -403,6 +498,10 @@ section.stories .action {
         animation: appear 0.5s alternate;
     }
 
+    
+    
+    
+    
 }
 
 @media (max-width : 720px) {
@@ -416,7 +515,7 @@ section.stories .action {
         width: auto;
         height: none;
         flex: 1 1 0;
-        max-width: 500px;
+        max-width: 450px;
         
         max-height: 70% ;
     }
@@ -424,4 +523,51 @@ section.stories .action {
     section.main .content {
         flex-direction: column;
     }
+
+    section.plans {
+        display: block;
+        padding-top: 0;
+    }
+    
+    section.plans .plan {
+        width: 90%;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto ;
+        max-height: none;
+        height: 100%;
+    }
+    
+    section.plans .plan .cover {
+        flex: 1 1 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: auto im !important;
+        opacity: 0.8;
+        box-shadow: 0 0 0.7rem 0.5rem var(--bg-color-tertiary);
+    
+    }
+    
+    section.plans .plan .offer {
+        padding: 2rem;
+        
+    }
+    section.plans .plan .offer .title {
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 0.5rem 0;
+    }
+    section.plans .plan .offer .details {
+        font-size: 1.6rem;
+        margin: 0.5rem 0;
+    }
+    section.plans .plan .offer .btn-action {
+        font-size: 1.7rem;
+        margin: 0.5rem 0;
+    }
+    
 }
