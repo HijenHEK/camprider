@@ -183,7 +183,6 @@ section.main .content {
 
 section.main .content .header {
     margin: 2rem 0;
-
 }
 section.main .content .header .title {
     font-size: 7rem;
@@ -530,12 +529,22 @@ footer .about {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 2rem;
 }
-footer .about .title {
+footer .about .header {
     font-size: 3.5rem;
     font-weight: 600;
-    margin-bottom: 2rem ;
+    margin-bottom: 4rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .about .header .brand {
+    flex: unset;
+    margin: 0 2rem;
+}
+footer .about .header .brand img{
+    height: 20rem;
 }
 footer .about .details {
     font-size: 1.8rem;
@@ -551,13 +560,13 @@ footer .about .social-links *:not(:last-child) {
 footer .about .social-links * {
     padding: 0.5rem;
 }
-footer .links {
+footer > .links {
     flex: 1 1 450px;
     max-width: 550px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    margin-bottom: 2rem;
+    margin: 2rem;
 
 }
 footer .links .title {
@@ -575,6 +584,14 @@ footer .links > * > .links li  {
 footer a:hover {
     color: var(--color-secondary);
 }
+footer .social-links > a > img {
+    width: 4rem;
+    margin: 0;
+}
+footer .social-links > a:hover img{
+    cursor: pointer;
+}
+
 
 @media (max-height : 700px ){
     section.main .content {
