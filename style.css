@@ -59,8 +59,10 @@ header.scrolling{
     flex-shrink: 1;
 }
 .brand .brand-name.toggle {
-    margin: 3rem 2rem !important;
+    /* margin: 3rem 2rem !important; */
+    display: none;
 }
+
 .brand img.toggle {
     margin : 0  0;
     height: 15rem;
@@ -171,7 +173,7 @@ section.main .content .header {
 
 }
 section.main .content .header .title {
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 900;
     letter-spacing: 0.3rem;
     color: var(--color-secondary);
@@ -223,7 +225,7 @@ section.main .content  .action {
 
 .container {
     max-width : 1440px ;
-    margin : 0 auto ;
+    margin : 0 auto;
 }
 
 section.stories {
@@ -231,11 +233,11 @@ section.stories {
     justify-content: center;
     align-items: center;
     margin-top: -2rem;
-    background: linear-gradient(to bottom , rgba(217,214,205,0.5) , rgba(217,214,205,0.7)) ,
+    background: linear-gradient(to bottom , rgba(217,214,205,0.4) , rgba(84, 81, 78, 0.952)) ,
                 url('./img/dino-reichmuth-pl1mhwMctJc-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    background-blend-mode: color;
+    /* background-blend-mode: color; */
 }
 section.stories .header {
     text-align: center;
@@ -297,7 +299,20 @@ section.stories .action {
     align-items: start;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    -webkit-filter: opacity(0.7); /* Safari 6.0 - 9.0 */
+    filter: opacity(0.75);
 
+
+}
+
+.card:hover .image {
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+    transition: all 0.5s ease-in;
+    
+}
+.card:hover {
+    cursor: pointer;
 }
 .card .body {
     flex: 0 0 40%;
@@ -323,6 +338,7 @@ section.stories .action {
 section.plans {
     display: block;
     padding-top: 0;
+    margin : 2rem auto;
 }
 
 section.plans .plan {
@@ -330,10 +346,10 @@ section.plans .plan {
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    height: 500px;
+    height: 450px;
     max-height: 100%;
     max-width: 130rem;
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 section.plans .plan:nth-child(2n) {
     flex-direction: row-reverse;
@@ -446,6 +462,7 @@ section.plans .plan .offer .btn-action {
         
     }
     
+    
 }
 
 @media (max-height : 400px) {
@@ -510,18 +527,17 @@ section.plans .plan .offer .btn-action {
         max-width: 100%;
         
     }
+    
     .cards-row .card {
         margin: 2rem;
-        width: auto;
-        height: none;
-        flex: 1 1 0;
         max-width: 450px;
-        
-        max-height: 70% ;
     }
 
     section.main .content {
         flex-direction: column;
+    }
+    section.main .content .header .title{
+        font-size: 5rem;
     }
 
     section.plans {
@@ -531,34 +547,21 @@ section.plans .plan .offer .btn-action {
     
     section.plans .plan {
         width: 90%;
-        margin: 2rem auto;
-        display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        height: auto ;
-        max-height: none;
         height: 100%;
     }
-    
-    section.plans .plan .cover {
-        flex: 1 1 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        height: auto im !important;
-        opacity: 0.8;
-        box-shadow: 0 0 0.7rem 0.5rem var(--bg-color-tertiary);
-    
+    section.plans .plan:nth-child(2n) {
+        flex-direction: column;
+
     }
+
     
     section.plans .plan .offer {
         padding: 2rem;
-        
     }
     section.plans .plan .offer .title {
         font-size: 3rem;
-        font-weight: 600;
         margin: 0.5rem 0;
     }
     section.plans .plan .offer .details {
@@ -568,6 +571,9 @@ section.plans .plan .offer .btn-action {
     section.plans .plan .offer .btn-action {
         font-size: 1.7rem;
         margin: 0.5rem 0;
+    }
+    header .brand .brand-name {
+        display: none;
     }
     
 }
