@@ -35,8 +35,8 @@ header {
     width: 100%;
 }
 header.scrolling{
-    background: linear-gradient(to top , rgba(255, 241, 241, 0.7) 10% , rgba(255, 255, 255, 0.9));
-    box-shadow: 0 0 0.5rem 0.1rem rgba(255, 241, 241, 0.4);
+    background: linear-gradient(to top , rgba(255, 241, 241, 0.5) 10% , rgba(255, 255, 255, 0.7));
+    box-shadow: 0 0 0.5rem 0.1rem rgba(255, 241, 241, 0.2);
 }
 .brand {
     /* flex: 1;
@@ -139,7 +139,8 @@ section.main {
 }
 
 @keyframes clipPath {
-    0% { -webkit-clip-path: none }
+    0% { -webkit-clip-path: none ;
+            clip-path: none ;}
     100% { -webkit-clip-path: polygon(0% 0%, 0% 100%, 4% 99%, 6% 100%, 7% 99%,
         8% 100%, 9% 99%, 10% 100%, 11% 99%, 15% 100%,
         17% 100%, 18% 99%, 20% 99.5%, 22% 99%, 25% 100%,
@@ -150,10 +151,21 @@ section.main {
         77% 100%, 80% 99.5%, 82% 99%, 85% 100%, 87% 99%,
         89% 99%, 92% 99.5%, 94% 100%, 96% 99.5%, 97% 99.2%
                              , 100% 100% , 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 4% 99%, 6% 100%, 7% 99%,
+            8% 100%, 9% 99%, 10% 100%, 11% 99%, 15% 100%,
+            17% 100%, 18% 99%, 20% 99.5%, 22% 99%, 25% 100%,
+            27% 100%, 30% 99.5%, 32% 99%, 35% 100%, 40% 99%,
+            42% 99%, 45% 99.5%, 47% 100%, 50% 99.5%,
+            52% 100%, 55% 99%, 57% 100%, 62% 99%, 65% 100%,
+            67% 100%, 70% 99%, 72% 99.5%, 73% 99%, 75% 100%,
+            77% 100%, 80% 99.5%, 82% 99%, 85% 100%, 87% 99%,
+            89% 99%, 92% 99.5%, 94% 100%, 96% 99.5%, 97% 99.2%
+                                , 100% 100% , 100% 0%);                             
         
     }
   }
 
+  
 /* section.main {
     display: flex;
     justify-content: space-between;
@@ -398,8 +410,97 @@ section.plans .plan .offer .btn-action {
 }
 
 
+section.explore {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(250,243,239)  ;
+    background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 10%, rgba(221, 216, 212, 0.4)  90%),
+    url('./img/dominik-jirovsky-re2LZOB2XvY-unsplash.jpg');
+    background-size: cover;
+    background-position: bottom;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(175, 171, 169, 0.61);
+}
 
+section.explore .header {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+section.explore .header .title {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-transform: uppercase;
 
+}
+
+section.explore .mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 2rem 0;
+    background-color: #817970d8  ;
+    animation: clipPath 4s forwards;
+    width: 100%;
+
+}
+section.explore .mail .content {
+    margin-bottom: 4rem ;
+}
+section.explore .mail .content .title{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 2rem;
+    text-align: center;
+    color: white;
+
+}
+section.explore .mail .content .subtitle{
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: oblique;
+    color: var(--color-primary);
+    margin: 2rem;
+    text-align: center;
+    color: white;
+
+}
+
+.form {
+    max-width: 95%;    
+}
+
+.form .inline-input {
+    width: 100%;
+    display: flex;
+    align-items:  stretch;
+    border-radius: 1rem ;
+    box-shadow: 0 0 0.5rem 0.2rem var(--bg-color-secondary);
+
+}
+.form .inline-input input:focus {    
+    box-shadow: -0.3rem 0.3rem 0.5rem 0.2rem var(--bg-color-secondary);
+}
+.form .inline-input input {
+    border: none;
+    padding: 1.5rem;
+    font-size: 2rem;
+    outline: none;
+    
+}
+.form .inline-input .btn-form {
+    box-shadow: -0.5rem 0 0.5rem 0.2rem var(--bg-color-secondary);
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+
+}
 
 @media (max-height : 700px ){
     section.main .content {
@@ -576,4 +677,40 @@ section.plans .plan .offer .btn-action {
         display: none;
     }
     
+}
+
+
+@media (max-width : 520px) {
+    .form .inline-input {
+        flex-direction: column;
+        align-items:  center;
+        border-radius: none ;
+        box-shadow: none;
+    
+    }
+    .form .inline-input input:focus {    
+        box-shadow: 0 0 0.5rem 0.2rem var(--bg-color-secondary);
+    }
+    .form .inline-input input {
+        padding: 1rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        
+    }
+    .form .inline-input .btn-form {
+        box-shadow: 0 0 0.5rem 0.2rem var(--bg-color-secondary);
+        font-weight: 600;
+    
+    }
+    
+    .cards-row {
+        align-items: center;
+    }
+    
+    .cards-row .card {
+        margin: 2rem;
+        width: auto;
+        max-width: 90%;
+    }
 }
