@@ -122,6 +122,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 0 0.5rem 0.5rem var(--bg-color-secondary);
 }
 
 section.main {
@@ -210,6 +211,11 @@ section.main .content  .body .desc{
 ul , li {
     list-style: none;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 section.main .content  .action {
     display: flex;
 }
@@ -346,11 +352,14 @@ section.stories .action {
 
 .card .image img {
     width: 100%;
+    object-fit: cover;
 }
 section.plans {
     display: block;
     padding-top: 0;
-    margin : 2rem auto;
+    margin : 0 auto;
+    padding: 2rem 0;
+    background-color: var(--bg-color-secondary);
 }
 
 section.plans .plan {
@@ -382,6 +391,7 @@ section.plans .plan .cover img {
     /* flex-shrink: 0; */
     min-width: 100%;
     min-height: 100%;
+    object-fit: cover;
     
 }
 section.plans .plan .offer {
@@ -500,6 +510,70 @@ section.explore .mail .content .subtitle{
     color: white;
     font-weight: 700;
 
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:var(--color-primary);
+    animation: clipPathReverse 2s forwards;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding: 4rem;
+}
+
+footer .about {
+    flex: 1 1 450px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+footer .about .title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem ;
+}
+footer .about .details {
+    font-size: 1.8rem;
+    margin-bottom: 2rem ;
+}
+footer .about .social-links {
+    margin-bottom: 2rem ;
+
+}
+footer .about .social-links *:not(:last-child) {
+    margin-right: 0.5rem;
+}
+footer .about .social-links * {
+    padding: 0.5rem;
+}
+footer .links {
+    flex: 1 1 450px;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+
+}
+footer .links .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+footer .links > * > .links {
+    display: flex;
+    flex-direction: column;
+}
+footer .links > * > .links li  {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+footer a:hover {
+    color: var(--color-secondary);
 }
 
 @media (max-height : 700px ){
@@ -714,3 +788,4 @@ section.explore .mail .content .subtitle{
         max-width: 90%;
     }
 }
+
