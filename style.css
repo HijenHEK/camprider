@@ -249,7 +249,7 @@ section.main .content  .action {
     margin : 0 auto;
 }
 
-section.stories {
+section.events {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -260,11 +260,11 @@ section.stories {
     background-position: center;
     /* background-blend-mode: color; */
 }
-section.stories .header {
+section.events .header {
     text-align: center;
     margin: 2rem 0;
 }
-section.stories .header .title {
+section.events .header .title {
     font-size: 5rem;
     font-weight: 900;
     letter-spacing: 0.3rem;
@@ -272,14 +272,14 @@ section.stories .header .title {
     text-transform: uppercase;
 
 }
-section.stories .header .subtitle {
+section.events .header .subtitle {
     font-size: 2rem;
     font-style: oblique;
     font-weight: 700;
     letter-spacing: 0.15rem;
     color: var(--color-tertiary);
 }
-section.stories .action {
+section.events .action {
     margin: 2rem 0;
     font-size: 2rem;
     display: flex;
@@ -291,18 +291,16 @@ section.stories .action {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     margin: 2rem 0;
     height: 80%;
 }
 
 .card {
     flex: 0 0 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
+    
     background-color: var(--color-tertiary);
-    height: 100%;
+    
     width: 400px;
     max-width: 450px;
 
@@ -417,9 +415,20 @@ section.plans .plan .offer .details {
     font-size: 1.7rem;
     margin: 1rem 0;
 }
+
+section.plans .plan .offer .details .def{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+section.plans .plan .offer .details .steps li{
+    list-style: decimal ;
+    margin:0 2rem;
+
+}
+
 section.plans .plan .offer .btn-action {
     font-size: 2rem;
-    margin: 1rem 0;
+    margin-top: 2rem ;
 }
 
 
@@ -604,12 +613,12 @@ footer .social-links > a:hover img{
         align-items: center;
     }
 
-    section.stories .header .title {
+    section.events .header .title {
         font-size: 3.5rem;
         
     
     }
-    section.stories .header .subtitle {
+    section.events .header .subtitle {
         font-size: 1.8rem;
         
     }
