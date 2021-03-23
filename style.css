@@ -534,6 +534,8 @@ footer {
     width: 100%;
     color: rgb(255, 255, 255);
     padding: 4rem;
+    z-index:0;
+    margin-top: -2rem;
 }
 
 footer .about {
@@ -603,6 +605,115 @@ footer .social-links > a > img {
 }
 footer .social-links > a:hover img{
     cursor: pointer;
+}
+
+
+section.contact {
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 12rem;
+    background-color: rgb(250,243,239)  ;
+    background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 10%, rgba(221, 216, 212, 0.4)  90%),
+    linear-gradient(to left, rgba(255, 255, 255, 0) 50%,  rgb(237, 234, 228) 90%),
+    url('./img/dominik.jpg');
+    background-size: cover;
+    background-position: bottom;
+
+}
+section.contact .mail {
+    background-color: #eb9f52ea ;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: clipPath 2s forwards;
+    min-height: 50rem;
+    z-index: 2;
+
+}
+section.contact .mail .content {
+    color: white;
+    margin-bottom: 2rem;
+}
+section.contact .mail .content .title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+section.contact .mail .content .subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+input , textarea {
+    border: none;
+    padding: 1rem;
+    outline: none;
+
+}
+section.contact .form {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form .group {
+    width: 100%;
+    margin: 1rem 0;
+}
+.form .control {
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    background-color: rgb(239, 235, 225);
+
+}
+.control:focus {
+    box-shadow: 0 0 0.5rem 0.2rem rgba(239, 235, 225, 0.7);
+}
+
+.form .btn {
+    background-color: rgba(239, 235, 225, 0.7);
+}
+
+
+section.contact .address {
+    background-color: #8179709f;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: clipPath 2s forwards;
+    min-height: 50rem;
+    margin-top:-2rem;
+    z-index: 1;
+
+}
+section.contact .address .content {
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+
+}
+section.contact .address .content .title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+section.contact .address .content .subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+section.contact .address .map {
+    width: 100%;
+}
+section.contact .address .map iframe{
+    width: 100%;
+    box-shadow: 0 0 0.5rem 0.2rem var(--bg-color-primary);
 }
 
 
