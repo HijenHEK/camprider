@@ -93,7 +93,13 @@ nav .nav-item {
 
 }
 
-
+nav .active {
+        background-color: var(--color-secondary);
+        color: white;
+        box-shadow: 0 0 0.5rem 0.2rem var(--color-secondary);
+        backface-visibility: hidden;
+        transition: all 0.4s ease-in-out;
+}
 nav .nav-item:last-child {
     margin-right:0 !important  ;
 }

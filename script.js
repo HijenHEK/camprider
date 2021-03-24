@@ -44,4 +44,13 @@ window.addEventListener('load' ,()=>{
     //     }
     // })
     
+
+
+
+    var path = document.location.pathname.split('/')[1];
+    var active;
+    
+    if(active = document.querySelector('nav .active')) active.classList.remove('active');
+    if(active = document.querySelector('#'+path.split('.')[0].toLowerCase())) active.classList.add('active');
+
 });
