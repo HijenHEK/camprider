@@ -125,7 +125,7 @@ a {
     display: none;
 }
 
-section {
+section , main {
     min-height: 100vh;
     padding-top: 2rem;
     /* max-height: 100rem; */
@@ -722,6 +722,100 @@ section.contact .address .map iframe{
     box-shadow: 0 0 0.5rem 0.2rem var(--bg-color-primary);
 }
 
+
+main.plans {
+    display: block;
+    padding: 8rem 5rem 5rem 5rem;
+}
+main.plans .header {
+    text-align: center;
+    padding: 4rem 0;
+
+}
+main.plans .header .title{
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: var(--color-secondary);
+}
+main.plans .header .subtitle{
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+main.plans .plans {
+    margin-top: 2rem;
+}
+main.plans .plans  .plan{
+    margin: 0.5rem auto;
+    display: flex;
+    height: 200px;
+    align-items: center;
+
+}
+main.plans .plans  .plan .cover {
+    flex: 1 1 40%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 0 0.3rem 0.05rem var(--color-tertiary);
+    transform: skewX(2deg);
+
+}
+main.plans .plans  .plan .cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main.plans .plans .plan .content {
+    background: linear-gradient( to left , var(--color-tertiary) , var(--color-primary)) ;
+    flex: 1 1 60%;
+    padding:2rem;
+    height: 100%;
+    box-shadow: -0.1rem 0 0.3rem 0.05rem var(--color-primary);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: skewX(2deg);
+
+}
+main.plans .plans .plan .content > * {
+    transform: skew(-2deg);
+}
+main.plans .plans .plan:nth-child(2n) .content {
+    transform: skewX(-2deg);
+
+}
+main.plans .plans .plan:nth-child(2n) .content  > * {
+    transform: skew(2deg);
+}
+
+main.plans .plans  .plan:nth-child(2n) .cover {
+    transform: skew(-2deg);
+}
+
+
+main.plans .plans .plan .content .title{
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+main.plans .plans .plan .content .details{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+main.plans .plans .plan .content .meta {
+    margin-top: auto;
+}
+main.plans .plans .plan .content .meta .btn-action{
+    padding: 1rem;
+    font-size: 1.7rem;
+    margin: 0;
+}
 
 @media (max-height : 700px ){
     section.main .content {
