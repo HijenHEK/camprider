@@ -898,6 +898,11 @@ main.plans .plans .plan .content .meta .btn-action{
     }
 }
 @media (max-width : 950px) {
+    main.plans {
+        display: block;
+        padding: 8rem 2rem 5rem 2rem;
+        background: linear-gradient(to bottom ,var(--bg-color-secondary) , var(--color-primary));
+    }
     section.main .content  {
         padding : 0 2rem ;
     }
@@ -945,6 +950,7 @@ main.plans .plans .plan .content .meta .btn-action{
 }
 
 @media (max-width : 720px) {
+    
     .cards-row {
         flex-direction: column;
         max-width: 100%;
@@ -1012,6 +1018,16 @@ main.plans .plans .plan .content .meta .btn-action{
         border-radius: none ;
         box-shadow: none;
     
+    }
+    main.plans .plans .plan .content {
+        
+        padding:1rem 1.5rem;
+    }
+    main.plans .plan .content .title {
+        margin-bottom: 0.5rem !important;
+    }
+    main.plans .plan .content .details {
+        margin-bottom: 0.5rem !important;
     }
     .form .inline-input input:focus {    
         box-shadow: 0 0 0.5rem 0.2rem var(--bg-color-secondary);
