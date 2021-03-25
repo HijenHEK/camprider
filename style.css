@@ -726,17 +726,19 @@ section.contact .address .map iframe{
 main.plans {
     display: block;
     padding: 8rem 5rem 5rem 5rem;
+    background: linear-gradient(to bottom ,var(--bg-color-secondary) , var(--color-primary));
 }
 main.plans .header {
     text-align: center;
     padding: 4rem 0;
+    width: 100%;
+    color: var(--color-primary);
 
 }
 main.plans .header .title{
     font-size: 4rem;
     font-weight: 600;
     margin: 1rem 0;
-    color: var(--color-secondary);
 }
 main.plans .header .subtitle{
     font-size: 1.8rem;
@@ -744,6 +746,10 @@ main.plans .header .subtitle{
 }
 main.plans .plans {
     margin-top: 2rem;
+    opacity: 0.85;
+}
+main.plans .plan:hover {
+    opacity: 0.95;
 }
 main.plans .plans  .plan{
     margin: 0.5rem auto;
@@ -768,6 +774,7 @@ main.plans .plans  .plan .cover img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: bottom;
 }
 
 main.plans .plans .plan .content {
