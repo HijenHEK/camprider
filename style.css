@@ -621,21 +621,20 @@ section.contact {
     background-color: rgb(250,243,239)  ;
     background-image:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 10%, rgba(221, 216, 212, 0.4)  90%),
-    linear-gradient(to left, rgba(255, 255, 255, 0) 50%,  rgb(237, 234, 228) 90%),
     url('./img/dominik.jpg');
     background-size: cover;
     background-position: bottom;
 
 }
 section.contact .mail {
-    background-color: #eb9f52ea ;
+    background: linear-gradient(to bottom ,#eb9f523d 5% , #eb9f52c7 30%, #8179709f);
+    box-shadow: 0 -1rem 0.5rem 0.2rem #eb9f5234;
     padding: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: clipPath 2s forwards;
     min-height: 50rem;
     z-index: 2;
 
@@ -694,10 +693,10 @@ section.contact .address {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: clipPath 2s forwards;
     min-height: 50rem;
-    margin-top:-2rem;
     z-index: 1;
+    background: linear-gradient(to bottom, #8179709f , var(--color-primary));
+
 
 }
 section.contact .address .content {
